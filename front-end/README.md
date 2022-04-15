@@ -1,5 +1,5 @@
-# Capstone: Restaurant Reservation System Frontend
+# Restaurant Reservation System Frontend
 
-This starter code for the backend of the capstone project in the Thinkful curriculum.
+TAPI built following RESTful design principles with PostgreSQL database for Restaurant Reservation System.
 
-See [../README.md](../README.md) for detailed instructions.
+Deployed API can be found [here](https://jason-resturant-frontend.herokuapp.com/dashboard)
