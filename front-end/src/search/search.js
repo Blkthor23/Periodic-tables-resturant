@@ -27,10 +27,10 @@ function Search() {
     const abortController = new AbortController();
     try {
       const { mobile_number } = formData;
-      const data = await listReservations(
-        { mobile_number },
+      const data = await listReservations(mobile_number,
         abortController.signal
       );
+      console.log([...data]);
       setFoundReservations([...data]);
     } catch (error) {
       setFoundReservationsError(error);

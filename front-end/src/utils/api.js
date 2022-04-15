@@ -88,7 +88,7 @@ export async function makeReservation(reservation, signal){
   const options = {
     method:"POST",
     headers,
-    body: JSON.stringify({reservation}),
+    body: JSON.stringify(reservation),
     signal,
   }
 

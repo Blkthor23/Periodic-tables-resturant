@@ -163,17 +163,17 @@ function checkStatus(req, res, next) {
 }
 
 async function list(req, res) {
-  let { date } = req.query;
-  let { mobile_number } = req.query;
-
+   let { date } = req.query;
+   let { mobile_number } = req.query;
+  
   if (mobile_number) {
     const data = await service.search(mobile_number);
     return res.json({ data });
   }
 
-  if (!date) {
-    date = asDateString(new Date());
-  }
+   if (!date) {
+     date = asDateString(new Date());
+   }
 
   const data = await service.list(date);
   return res.json({ data });
