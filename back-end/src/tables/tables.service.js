@@ -8,7 +8,7 @@ function read(table_id) {
   return knex("tables").where({ table_id: table_id }).first();
 }
 
-function create(newTable) {
+async function create(newTable) {
   return knex("tables")
     .insert(newTable, "*")
     .then((records) => records[0]);

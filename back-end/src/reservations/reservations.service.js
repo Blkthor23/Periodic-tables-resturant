@@ -14,14 +14,14 @@ const read = (reservation_id) => {
     .first();
 }
 
-const create = (reservation) => {
+const create = async (reservation) => {
     return knex("reservations")
     .insert(reservation)
     .returning("*")
     .then((createdRes) => createdRes[0]) 
 }
 
-const update = (chagedReservation) => {
+const update = async (chagedReservation) => {
     return knex("reservations")
     .select("*")
     .where({ reservation_id: chagedReservation.reservation_id })
