@@ -30,7 +30,6 @@ function Search() {
       const data = await listReservations(mobile_number,
         abortController.signal
       );
-      console.log([...data]);
       setFoundReservations([...data]);
     } catch (error) {
       setFoundReservationsError(error);

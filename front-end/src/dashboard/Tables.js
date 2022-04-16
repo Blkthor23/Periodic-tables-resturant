@@ -14,8 +14,8 @@ function ReservationsTable({ tables, handleFinish }) {
           </tr>
         </thead>
         <tbody>
-          {tables.map((table, index) => (
-            <tr key={index}>
+          {tables.map((table) => (
+            <tr key={table.table_id}>
               <th scope="row">{table.table_id}</th>
               <td>{table.table_name}</td>
               <td>{table.capacity}</td>

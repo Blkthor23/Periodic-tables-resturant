@@ -21,8 +21,8 @@ function Reservations({ reservations, handleCancel }) {
         </thead>
         <tbody>
           {reservations.length !== 0 ? (
-            reservations.map((reservation, index) => (
-              <tr key={index}>
+            reservations.map((reservation) => (
+              <tr key={reservation.reservation_id}>
                 <th scope="row">{reservation.reservation_id}</th>
                 {path.includes("search") && (
                   <td>{reservation.reservation_date}</td>
